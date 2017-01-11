@@ -1,19 +1,19 @@
 'use strict';
 
-var validate = require('./validate');
-var ValidationError = require('../error/validation_error');
+const validate = require('./validate');
+const ValidationError = require('../error/validation_error');
 
 module.exports = function validatePaintProperty(options) {
-    var key = options.key;
-    var style = options.style;
-    var styleSpec = options.styleSpec;
-    var value = options.value;
-    var propertyKey = options.objectKey;
-    var layerSpec = styleSpec['paint_' + options.layerType];
+    const key = options.key;
+    const style = options.style;
+    const styleSpec = options.styleSpec;
+    const value = options.value;
+    const propertyKey = options.objectKey;
+    const layerSpec = styleSpec[`paint_${options.layerType}`];
 
     if (!layerSpec) return [];
 
-    var transitionMatch = propertyKey.match(/^(.*)-transition$/);
+    const transitionMatch = propertyKey.match(/^(.*)-transition$/);
 
     if (transitionMatch && layerSpec[transitionMatch[1]] && layerSpec[transitionMatch[1]].transition) {
         return validate({

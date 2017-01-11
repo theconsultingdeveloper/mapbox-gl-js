@@ -1,20 +1,20 @@
 'use strict';
 
-var validate = require('./validate');
-var ValidationError = require('../error/validation_error');
+const validate = require('./validate');
+const ValidationError = require('../error/validation_error');
 
 module.exports = function validateLayoutProperty(options) {
-    var key = options.key;
-    var style = options.style;
-    var styleSpec = options.styleSpec;
-    var value = options.value;
-    var propertyKey = options.objectKey;
-    var layerSpec = styleSpec['layout_' + options.layerType];
+    const key = options.key;
+    const style = options.style;
+    const styleSpec = options.styleSpec;
+    const value = options.value;
+    const propertyKey = options.objectKey;
+    const layerSpec = styleSpec[`layout_${options.layerType}`];
 
     if (!layerSpec) return [];
 
     if (options.valueSpec || layerSpec[propertyKey]) {
-        var errors = [];
+        const errors = [];
 
         if (options.layerType === 'symbol') {
             if (propertyKey === 'icon-image' && style && !style.sprite) {

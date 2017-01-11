@@ -1,6 +1,7 @@
 [ignore]
 
 .*/node_modules/.*
+.*/test/js/style-spec/fixture/invalidjson\.input\.json
 
 [include]
 
