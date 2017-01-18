@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('tap').test;
+const test = require('mapbox-gl-js-test').test;
 const spec = require('../../../js/style-spec');
 
 ['v6', 'v7', 'v8', 'latest'].forEach((version) => {

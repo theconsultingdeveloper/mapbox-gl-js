@@ -1,6 +1,6 @@
 'use strict';
 
-const t = require('tap').test;
+const t = require('mapbox-gl-js-test').test;
 const declass = require('../../../js/style-spec/declass');
 
 t('declass a style, one class', (t) => {

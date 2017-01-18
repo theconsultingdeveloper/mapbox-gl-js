@@ -1,6 +1,6 @@
 'use strict';
 
-const t = require('tap').test,
+const t = require('mapbox-gl-js-test').test,
     group = require('../../../js/style-spec/group_by_layout');
 
 t('group layers whose ref properties are identical', (t) => {

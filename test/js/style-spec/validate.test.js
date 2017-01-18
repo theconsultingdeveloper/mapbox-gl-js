@@ -1,7 +1,7 @@
 /* global process, __dirname */
 'use strict';
 
-const t = require('tap').test,
+const t = require('mapbox-gl-js-test').test,
     glob = require('glob'),
     fs = require('fs'),
     path = require('path'),

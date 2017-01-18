@@ -1,6 +1,6 @@
 'use strict';
 
-const t = require('tap').test,
+const t = require('mapbox-gl-js-test').test,
     format = require('../../../js/style-spec/format');
 
 function roundtrip(style) {
