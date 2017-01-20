@@ -327,8 +327,8 @@ class Camera extends Evented {
             nw = tr.project(bounds.getNorthWest()),
             se = tr.project(bounds.getSouthEast()),
             size = se.sub(nw),
-            scaleX = (tr.width - options.padding * 2 - Math.abs(offset.x) * 2) / size.x,
-            scaleY = (tr.height - options.padding * 2 - Math.abs(offset.y) * 2) / size.y;
+            scaleX = (tr.width - options.padding.left - options.padding.right - Math.abs(offset.x) * 2) / size.x,
+            scaleY = (tr.height - options.padding.top - options.padding.bottom - Math.abs(offset.y) * 2) / size.y;
 
         options.center = tr.unproject(nw.add(se).div(2));
         options.zoom = Math.min(tr.scaleZoom(tr.scale * Math.min(scaleX, scaleY)), options.maxZoom);
