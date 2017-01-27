@@ -20,12 +20,28 @@
      "gl-style-format": "bin/gl-style-format",
      "gl-style-composite": "bin/gl-style-composite"
   },
+  "browserify": {
+    "transform": [
+      [
+        "bubleify",
+        {
+          "bubleError": true,
+          "transforms": {
+            "dangerousForOf": true
+          }
+        }
+      ],
+      "unassertify"
+    ]
+  },
   "dependencies": {
+    "bubleify": "^0.5.1",
     "csscolorparser": "~1.0.2",
     "fast-stable-stringify": "^0.1.1",
     "jsonlint-lines-primitives": "~1.6.0",
     "lodash.isequal": "^3.0.4",
     "minimist": "0.0.8",
-    "sort-object": "^0.3.2"
+    "sort-object": "^0.3.2",
+    "unassertify": "^2.0.0"
   }
 }
